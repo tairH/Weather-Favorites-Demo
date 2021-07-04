@@ -1,0 +1,16 @@
+<div>
+
+<mat-selection-list #citiesList (selectionChange)="onCitySelected(citiesList.selectedOptions.selected[0].value)"
+  [multiple]="false">
+  <mat-list-option *ngIf="isLoading" class="is-loading">Loading...</mat-list-option>
+  <ng-container *ngIf="!isLoading">
+    <mat-list-option *ngFor="let city of (cities$ | async)" [value]="city">       
+    <div mat-line>{{city.LocalizedName}}</div>
+    <div mat-line>{{city.Country.LocalizedName}}</div>
+    </mat-list-option>
+  </ng-container>
+</mat-selection-list>
+
+
+</div>
+

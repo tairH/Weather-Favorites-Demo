@@ -1,0 +1,34 @@
+<div>
+  <mat-form-field>
+    <input matInput placeholder="Search" aria-label="State" [formControl]="searchCitiesCtrl">
+    <!--[matAutocomplete]="auto" -->
+    <!-- <mat-autocomplete #auto="matAutocomplete" [displayWith]="displayFn"> 
+  <mat-option *ngIf="isLoading" class="is-loading">Loading...</mat-option>
+  <ng-container *ngIf="!isLoading">
+    <mat-option *ngFor="let city of filteredCities" [value]="city.Key">
+      <span><b>{{city.Country.LocalizedName}}</b> ({{city.AdministrativeArea.LocalizedName}})</span>
+    </mat-option>
+  </ng-container>
+</mat-autocomplete>-->
+  </mat-form-field>
+
+  <br>
+  <mat-selection-list #citiesList (selectionChange)="onCitySelected(citiesList.selectedOptions.selected[0].value)"
+    [multiple]="false">
+    <mat-list-option *ngIf="isLoading" class="is-loading">Loading...</mat-list-option>
+    <ng-container *ngIf="!isLoading">
+      <mat-list-option *ngFor="let city of filteredCities" [value]="city">       
+        <div mat-line>{{city.LocalizedName}}</div>
+        <div mat-line>{{city.Country.LocalizedName}}</div>
+      </mat-list-option>
+    </ng-container>
+  </mat-selection-list>
+
+  <ng-container *ngIf="errorMsg; ">
+    {{errorMsg}}
+  </ng-container>
+  <!--<ng-template #elseTemplate>
+    <h5>Selected Value: {{searchCitiesCtrl.value}}</h5>
+  </ng-template>-->
+
+</div>

@@ -1,0 +1,59 @@
+<mat-sidenav-container>
+
+<mat-sidenav #sidenav mode="over">
+  <label>Favorites Wheather Application</label> 
+  <hr/>   
+  <nav>
+    <a routerLink="home"(click)="clickHandler()" routerLinkActive="active">Home</a>
+    <a routerLink="favorites"   (click)="clickHandler()" routerLinkActive="active">Contact</a>
+  </nav>
+</mat-sidenav>
+
+<mat-sidenav-content>
+  <mat-toolbar color="primary">
+    <header>
+      <mat-icon (click)="sidenav.toggle()">menu</mat-icon>
+      <label>Favorites Wheather Application</label>        
+      <nav>
+        <a routerLink="home"    routerLinkActive="active">Home</a>
+       
+        <a routerLink="favorites" routerLinkActive="active">Favorites</a>
+      </nav>        
+    </header>
+  </mat-toolbar>
+  <section>
+    <router-outlet></router-outlet>
+  </section>
+</mat-sidenav-content>
+</mat-sidenav-container>  <!--
+  <div>
+  <h3>Favorites:</h3>
+      <app-favorites-list></app-favorites-list>
+  </div>
+
+    <div>
+      <app-citie-list></app-citie-list>
+      <hr />
+      TOTAL Favorite Cities: {{ (cities$ | async).length }}
+      <br />
+
+      <input
+        type="text"
+        placeholder="add city"
+        #newCity
+        (keyup.enter)="addCity(newCity)"
+      />
+
+      <hr />
+      <li class="list-group-item" *ngFor="let item of (cities$ | async)">
+        {{ item.desc }}
+
+        <button
+          class="btn btn-danger btn-xs pull-right"
+          (click)="deleteCity(item.code)"
+        >
+          delete
+        </button>
+      </li>
+    </div>-->
+  `

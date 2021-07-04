@@ -1,0 +1,91 @@
+/* You can add global styles to this file, and also import other style files */
+/* Add application styles & imports to this file! */
+@import '~@angular/material/prebuilt-themes/deeppurple-amber.css';
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
+
+/* CUSTOM THEMES */
+/*@import '~@angular/material/theming';*/
+
+/* 1) define your fonts
+$general-typography: mat-typography-config(
+  $font-family: '"Open Sans", "Helvetica Neue", sans-serif',
+  $body-2: mat-typography-level(14px, 24px, 600)
+);
+*/
+@import url('https://fonts.googleapis.com/css?family=Pacifico|Shadows+Into+Light');
+/*
+$arabic-typography: mat-typography-config(
+  $font-family: '"Shadows Into Light", cursive'
+);
+
+$english-typography: mat-typography-config(
+  $font-family: '"Pacifico", cursive'
+);
+
+// .. and set the default font, we'll apply the other fonts later
+
+@include mat-core($general-typography);
+
+// 3) style specific component
+// this would normaly be in a .scss file of your custom component
+// therefore you'd just include those .scss files here
+@mixin my-custom-component($theme) {
+  // retrieve variables from current theme
+  // only keep those you need and remove the others
+  $primary: map-get($theme, primary);
+  //$accent: map-get($theme, accent);
+  //$warn: map-get($theme, accent);
+  //$foreground: map-get($theme, foreground);
+  //$background: map-get($theme, background);
+
+  mat-form-field,
+  .mat-form-field-appearance-legacy .mat-form-field-label {
+    color: mat-color($primary);
+  }
+}
+
+// 4) Helper which prevents us from adding all of our custom
+// components themes one by one to each theme
+@mixin custom-components-theme($theme) {
+  @include my-custom-component($theme);
+  //.. include all custom components mixins here
+}
+
+// 5) define default theme
+$app-primary: mat-palette($mat-indigo);
+$app-accent: mat-palette($mat-amber, A200, A100, A400);
+$app-warn: mat-palette($mat-red);
+$app-theme: mat-light-theme($app-primary, $app-accent, $app-warn);
+@include angular-material-theme($app-theme);
+@include custom-components-theme($app-theme);
+
+// 6) define alternate themes
+.Arabic {
+  $arabic-primary: mat-palette($mat-orange);
+  $arabic-accent: mat-palette($mat-blue, A200, A100, A400);
+  $arabic-warn: mat-palette($mat-red);
+  $arabic-theme: mat-light-theme($arabic-primary, $arabic-accent, $arabic-warn);
+
+  @include mat-core($arabic-typography);
+  @include angular-material-theme($arabic-theme);
+
+  @include custom-components-theme($arabic-theme);
+}
+
+.English {
+  $english-primary: mat-palette($mat-teal);
+  $english-accent: mat-palette($mat-pink, A200, A100, A400);
+  $english-warn: mat-palette($mat-red);
+  $english-theme: mat-light-theme(
+    $english-primary,
+    $english-accent,
+    $english-warn
+  );
+
+  @include mat-core($english-typography);
+  @include angular-material-theme($english-theme);
+
+  @include custom-components-theme($english-theme);
+}
+
+*/
