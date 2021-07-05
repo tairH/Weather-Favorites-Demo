@@ -3,7 +3,7 @@
 # WeatherFavorites
 
 This project was coded with [Angular Material UI](https:https://material.angular.io/) 
-and with [.Net 5 & EntityFrameworkCore] (https://devblogs.microsoft.com/dotnet/announcing-the-release-of-ef-core-5-0/)
+and with [.Net 5 & EntityFrameworkCore](https://devblogs.microsoft.com/dotnet/announcing-the-release-of-ef-core-5-0/)
 
 it was used:
 
