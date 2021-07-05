@@ -13,6 +13,7 @@ Uses:
 * angular-redux
 * angular ngrx store
 * angular-router
+* fxFlexLayout responsive library
 
 Run `npm insall`,
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
