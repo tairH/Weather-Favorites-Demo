@@ -1,7 +1,7 @@
-<h4>Current Selected City: </h4>
-<h3>
+<h3>Current Selected City: </h3>
+<h2>
   {{ ((selectedCity$ | async)??{localizedName:null}).localizedName }}
-</h3>
+</h2>
 <h5 *ngIf="!bootstrap">{{ ((selectedCity$ | async)??{temp:null}).temp }}
   <!---->
   <span>C </span>

@@ -47,7 +47,14 @@ export class FavoritesListComponent implements OnInit {
     });
     this.cities$.subscribe((c)=>{console.log("redux cities", c)});
   }
-  onCitySelected(city) {
-    this.actions.setCurrentCity(city);
+  onCitySelected(city:any) {
+      this.favoritesService.getWheather(city.key).subscribe(data => {
+        // console.log('wheather data:', data);
+         console.log('currentCityTemp',data[0].temperature.metric.value );
+         //this.actions.setCurrentTemp(data[0].temperature.metric.value);  
+         this.actions.setCurrentCity({...city, temp:data[0].temperature.metric.value});    
+       });
+    
+    //this.actions.setCurrentCity(city);
   }
 }
