@@ -2,29 +2,32 @@
 
 # WeatherFavorites
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 12.1.0.
-and with .Net 5 & EntityFrameworkCore
+This project was coded with [Angular Material UI](https:https://material.angular.io/) 
+and with [.Net 5 & EntityFrameworkCore] (https://devblogs.microsoft.com/dotnet/announcing-the-release-of-ef-core-5-0/)
 
 it was used:
 
 ## Client:
 
-### angular-redux
-### angular ngrx store
-### angular-router
+Uses:
+* angular-redux
+* angular ngrx store
+* angular-router
 
 Run `npm insall`,
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
 ## server
 
-### used HttpClient custom class for server callbacks to AccuWeather api's
-### Use swagger
-### EnabledCors for Dev Environment
-### manage environment variables (apiKey, connection string etc...)
+Uses: 
+* HttpClient custom service (for server callbacks to AccuWeather api's)
+* Use swagger
+* Enabled Cors - for Dev Environment
+* manage environment variables (apiKey, connection string etc...)
 
-Run in Nuget-Package-Console Update-Database cmdlet (Notice the .Infrastracture is startup project).
-Run with IISExpress on port https://localhost:44325/
+Run in Nuget-Package-Console -> Update-Database cmdlet 
+(Notice the .Infrastracture is startup project).
+Run the application on port https://localhost:44325/
 
 
 Thank You,
