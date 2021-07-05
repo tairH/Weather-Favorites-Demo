@@ -20,7 +20,7 @@ namespace WeatherFavorites.Infrastracture
             return await _context.Set<TEntity>().ToListAsync();
         }
 
-        public async Task<TEntity> GetById(int id)
+        public async Task<TEntity> GetById(string id)
         {
             return await _context.Set<TEntity>().FindAsync(id);
         }
@@ -32,8 +32,12 @@ namespace WeatherFavorites.Infrastracture
 
         public async Task Create(TEntity entity)
         {
-            await _context.Set<TEntity>().AddAsync(entity);
-            await _context.SaveChangesAsync();
+            var exstEntity = await Count(e=>entity.Equals(e));
+            if (!(exstEntity>0))
+            {
+                await _context.Set<TEntity>().AddAsync(entity);
+                await _context.SaveChangesAsync();
+            }
         }
 
         public async Task CreateRange(List<TEntity> entities)
@@ -54,7 +58,7 @@ namespace WeatherFavorites.Infrastracture
             await _context.SaveChangesAsync();
         }
 
-        public async Task Delete(int id)
+        public async Task Delete(string id)
         {
             var entity = await GetById(id);
             if (entity != null)

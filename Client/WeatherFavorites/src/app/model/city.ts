@@ -1,9 +1,12 @@
 export interface City {
-  code?: number;
-  desc?: string;
+  cityKey?: string;
+  cityLocalizedName?: string;
+  countryLocalizedName:string;
+  updatedDate:Date;
 }
 
 export interface State{
   selectedCity?:any;
+  selectedCityTemp?:any;
   favorites:any[];
 }

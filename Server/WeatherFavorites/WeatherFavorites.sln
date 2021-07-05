@@ -5,9 +5,9 @@ VisualStudioVersion = 16.0.30804.86
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WeatherFavorites.Api", "WeatherFavorites\WeatherFavorites.Api.csproj", "{BD01CD79-BE15-4F31-B17C-024183919113}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WeatherFavorites.Application", "WeatherFavorites.BL\WeatherFavorites.Application.csproj", "{DCE7E47B-C7E0-4089-83FE-36735367BECD}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WeatherFavorites.Application", "WeatherFavorites.Application\WeatherFavorites.Application.csproj", "{DCE7E47B-C7E0-4089-83FE-36735367BECD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WeatherFavorites.Domain", "WeatherFavorites.DAL\WeatherFavorites.Domain.csproj", "{574E217E-977D-4DF6-8818-30FFDDC3D6F5}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WeatherFavorites.Domain", "WeatherFavorites.Domain\WeatherFavorites.Domain.csproj", "{574E217E-977D-4DF6-8818-30FFDDC3D6F5}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WeatherFavorites.Infrastracture", "WeatherFavorites.Infrastracture\WeatherFavorites.Infrastracture.csproj", "{51B76243-2EB3-42B6-BC00-C6792515F6BB}"
 EndProject

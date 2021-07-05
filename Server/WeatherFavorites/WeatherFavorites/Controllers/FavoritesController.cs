@@ -33,7 +33,7 @@ namespace WeatherFavorites.Api.Controllers
             await _cityFavoritesRepository.Create(city);
         }
         [HttpPost("Delete")]
-        public async Task Delete(int cityKey)
+        public async Task Delete(string cityKey)
         {
             await _cityFavoritesRepository.Delete(cityKey);
         }

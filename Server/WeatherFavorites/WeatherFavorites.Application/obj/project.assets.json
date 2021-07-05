@@ -17,8 +17,8 @@
   "libraries": {
     "WeatherFavorites.Domain/1.0.0": {
       "type": "project",
-      "path": "../WeatherFavorites.DAL/WeatherFavorites.Domain.csproj",
-      "msbuildProject": "../WeatherFavorites.DAL/WeatherFavorites.Domain.csproj"
+      "path": "../WeatherFavorites.Domain/WeatherFavorites.Domain.csproj",
+      "msbuildProject": "../WeatherFavorites.Domain/WeatherFavorites.Domain.csproj"
     }
   },
   "projectFileDependencyGroups": {
@@ -33,11 +33,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "E:\\Develop\\angular-wheather-favorites-demo\\Server\\WeatherFavorites\\WeatherFavorites.BL\\WeatherFavorites.Application.csproj",
+      "projectUniqueName": "E:\\Develop\\angular-wheather-favorites-demo\\Weather-Favorites-Demo\\Server\\WeatherFavorites\\WeatherFavorites.Application\\WeatherFavorites.Application.csproj",
       "projectName": "WeatherFavorites.Application",
-      "projectPath": "E:\\Develop\\angular-wheather-favorites-demo\\Server\\WeatherFavorites\\WeatherFavorites.BL\\WeatherFavorites.Application.csproj",
+      "projectPath": "E:\\Develop\\angular-wheather-favorites-demo\\Weather-Favorites-Demo\\Server\\WeatherFavorites\\WeatherFavorites.Application\\WeatherFavorites.Application.csproj",
       "packagesPath": "C:\\Users\\tair.hadad\\.nuget\\packages\\",
-      "outputPath": "E:\\Develop\\angular-wheather-favorites-demo\\Server\\WeatherFavorites\\WeatherFavorites.BL\\obj\\",
+      "outputPath": "E:\\Develop\\angular-wheather-favorites-demo\\Weather-Favorites-Demo\\Server\\WeatherFavorites\\WeatherFavorites.Application\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
@@ -58,8 +58,8 @@
         "netcoreapp3.1": {
           "targetAlias": "netcoreapp3.1",
           "projectReferences": {
-            "E:\\Develop\\angular-wheather-favorites-demo\\Server\\WeatherFavorites\\WeatherFavorites.DAL\\WeatherFavorites.Domain.csproj": {
-              "projectPath": "E:\\Develop\\angular-wheather-favorites-demo\\Server\\WeatherFavorites\\WeatherFavorites.DAL\\WeatherFavorites.Domain.csproj"
+            "E:\\Develop\\angular-wheather-favorites-demo\\Weather-Favorites-Demo\\Server\\WeatherFavorites\\WeatherFavorites.Domain\\WeatherFavorites.Domain.csproj": {
+              "projectPath": "E:\\Develop\\angular-wheather-favorites-demo\\Weather-Favorites-Demo\\Server\\WeatherFavorites\\WeatherFavorites.Domain\\WeatherFavorites.Domain.csproj"
             }
           }
         }

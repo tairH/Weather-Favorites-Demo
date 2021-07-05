@@ -10,6 +10,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using WeatherFavorites.Api.Services;
 using WeatherFavorites.Api.SettingsObjects;
 using WeatherFavorites.Infrastracture;
 
@@ -29,23 +30,40 @@ namespace WeatherFavorites
         {
             services.AddInfrastructureServices(Configuration);
 
+            services.AddCors(options =>
+            {
+                options.AddPolicy("AllowAllOrigins",
+                    builder => builder.AllowAnyOrigin()
+                    .AllowAnyMethod()
+                    //.AllowCredentials()
+                    .AllowAnyHeader());
+            });
+
             services.AddControllers();
+
+            
             if (Convert.ToBoolean(Configuration.GetSection("Swagger").GetSection("EnableSwagger").Value) == true)
             {
                 services.AddSwaggerGen(c => c.SwaggerDoc("v1", new OpenApiInfo { Title = "MOH.TimnaResearch.Api", Version = "v1" }));
             }
-            services.Configure<AccuWeatherSettings>(Configuration.GetSection("SearchSettings"));
+            services.Configure<AccuWeatherSettings>(Configuration.GetSection("AccuWeatherSettings"));
+            services.AddHttpClient<IHttpClientService, HttpClientService>();
+            services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
-        public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
+        public void Configure(IApplicationBuilder app, IWebHostEnvironment env, FavoritesContext db)
         {
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
             }
 
+            db.Database.EnsureCreated();
+
             app.UseRouting();
+
+            app.UseCors("AllowAllOrigins");
 
             app.UseEndpoints(endpoints =>
             {

@@ -56,13 +56,20 @@ export class CitieListComponent implements OnInit {
   } /*
     filter(name: string): any[] {
       return this.filteredCities.filter(option =>
-        option.LocalizedName.toLowerCase().indexOf(name.toLowerCase()) === 0);
+        option.localizedName.toLowerCase().indexOf(name.toLowerCase()) === 0);
     }
   
     displayFn(city: any): string {
-      return city ? city.LocalizedName : '';
+      return city ? city.localizedName : '';
     }*/
   onCitySelected(city:any) {
-    this.actions.setCurrentCity(city);
+    
+    
+    this.favoritesService.getWheather(city.key).subscribe(data => {
+      // console.log('wheather data:', data);
+       console.log('currentCityTemp',data[0].temperature.metric.value );
+       //this.actions.setCurrentTemp(data[0].temperature.metric.value);  
+       this.actions.setCurrentCity({...city, temp:data[0].temperature.metric.value});    
+     });
   }
 }

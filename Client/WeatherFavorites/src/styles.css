@@ -1,91 +1,112 @@
-/* You can add global styles to this file, and also import other style files */
-/* Add application styles & imports to this file! */
-@import '~@angular/material/prebuilt-themes/deeppurple-amber.css';
 @import "~@angular/material/prebuilt-themes/indigo-pink.css";
 
-/* CUSTOM THEMES */
-/*@import '~@angular/material/theming';*/
+html, body {
+  font-family: 'Roboto';
+  padding: 0px;
+  margin: 0px;
+}
 
-/* 1) define your fonts
-$general-typography: mat-typography-config(
-  $font-family: '"Open Sans", "Helvetica Neue", sans-serif',
-  $body-2: mat-typography-level(14px, 24px, 600)
-);
-*/
-@import url('https://fonts.googleapis.com/css?family=Pacifico|Shadows+Into+Light');
-/*
-$arabic-typography: mat-typography-config(
-  $font-family: '"Shadows Into Light", cursive'
-);
+.mat-sidenav-container  {
+  height: 100vh;
+}
 
-$english-typography: mat-typography-config(
-  $font-family: '"Pacifico", cursive'
-);
+.mat-sidenav-container .mat-sidenav {
+  background-color: #3f51b5;
+  padding: 10px;
+  min-width: 150px;
+}
 
-// .. and set the default font, we'll apply the other fonts later
+.mat-sidenav-container .mat-sidenav label {
+  color: white;
+  font: 500 20px/32px Roboto,"Helvetica Neue",sans-serif;
+}
 
-@include mat-core($general-typography);
+.mat-sidenav-container .mat-sidenav nav  {
+  margin-top: 15px;
+}
 
-// 3) style specific component
-// this would normaly be in a .scss file of your custom component
-// therefore you'd just include those .scss files here
-@mixin my-custom-component($theme) {
-  // retrieve variables from current theme
-  // only keep those you need and remove the others
-  $primary: map-get($theme, primary);
-  //$accent: map-get($theme, accent);
-  //$warn: map-get($theme, accent);
-  //$foreground: map-get($theme, foreground);
-  //$background: map-get($theme, background);
+.mat-sidenav-container .mat-sidenav nav a {
+  display: block;
+  outline: 0px;
+  margin: 5px 0px;
+  text-decoration: none;
+  color: white;
+  padding: 5px 15px;
+  border-radius: 5px;
+}
+.mat-sidenav-container .mat-sidenav nav a:hover {
+  color: yellow;
+}
+.mat-sidenav-container .mat-sidenav nav a.active {
+  color: yellow;
+  background-color: rgba(0, 0, 0, 0.2);
+}
 
-  mat-form-field,
-  .mat-form-field-appearance-legacy .mat-form-field-label {
-    color: mat-color($primary);
+.mat-sidenav-container .mat-sidenav-content .mat-toolbar {
+  height: 40px;
+  padding: 0px;
+}
+
+.mat-sidenav-container .mat-sidenav-content .mat-toolbar header {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.mat-sidenav-container .mat-sidenav-content .mat-toolbar header .mat-icon {
+  display: none;
+  cursor: pointer;
+  font-size: 32px;
+  width: 32px;
+  height: 32px;
+}
+
+.mat-sidenav-container .mat-sidenav-content .mat-toolbar header nav a {
+  color: white;
+  padding: 5px 10px;
+  margin-left: 5px;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+.mat-sidenav-container .mat-sidenav-content .mat-toolbar header nav a:hover {
+  color: yellow;
+}
+.mat-sidenav-container .mat-sidenav-content .mat-toolbar header nav a.active {
+  color: yellow;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+@media screen and (max-width: 1023px) {
+  .mat-sidenav-container .mat-sidenav-content .mat-toolbar {
+    padding-right: 10px;
+    padding-left: 5px;
+  }  
+  .mat-sidenav-container .mat-sidenav-content .mat-toolbar header .mat-icon {
+    display: block;
+    cursor: pointer;
+  }
+  .mat-sidenav-container .mat-sidenav-content .mat-toolbar header nav {
+    display: none;
+  }
+  .mat-sidenav-container .mat-sidenav-content section {
+    margin: 0 10px;
   }
 }
 
-// 4) Helper which prevents us from adding all of our custom
-// components themes one by one to each theme
-@mixin custom-components-theme($theme) {
-  @include my-custom-component($theme);
-  //.. include all custom components mixins here
+@media screen and (min-width: 1024px) {
+  .mat-sidenav-container .mat-sidenav-content .mat-toolbar header {
+    max-width: 1024px;
+    margin: 0 auto;
+  }
+  .mat-sidenav-container .mat-sidenav-content section {
+    max-width: 1024px;
+    margin: 0 auto;
+  }
 }
 
-// 5) define default theme
-$app-primary: mat-palette($mat-indigo);
-$app-accent: mat-palette($mat-amber, A200, A100, A400);
-$app-warn: mat-palette($mat-red);
-$app-theme: mat-light-theme($app-primary, $app-accent, $app-warn);
-@include angular-material-theme($app-theme);
-@include custom-components-theme($app-theme);
 
-// 6) define alternate themes
-.Arabic {
-  $arabic-primary: mat-palette($mat-orange);
-  $arabic-accent: mat-palette($mat-blue, A200, A100, A400);
-  $arabic-warn: mat-palette($mat-red);
-  $arabic-theme: mat-light-theme($arabic-primary, $arabic-accent, $arabic-warn);
 
-  @include mat-core($arabic-typography);
-  @include angular-material-theme($arabic-theme);
 
-  @include custom-components-theme($arabic-theme);
-}
 
-.English {
-  $english-primary: mat-palette($mat-teal);
-  $english-accent: mat-palette($mat-pink, A200, A100, A400);
-  $english-warn: mat-palette($mat-red);
-  $english-theme: mat-light-theme(
-    $english-primary,
-    $english-accent,
-    $english-warn
-  );
-
-  @include mat-core($english-typography);
-  @include angular-material-theme($english-theme);
-
-  @include custom-components-theme($english-theme);
-}
-
-*/

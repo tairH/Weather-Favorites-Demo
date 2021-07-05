@@ -1,2 +1,16 @@
-<div style="float:right; border-left:1px solid;margin-top:5px"><app-favorites-list></app-favorites-list></div>
-<app-current-city-weather></app-current-city-weather>
+<main fxFlex>
+    <header>
+      <h1>Your Favorites Cities:</h1>
+    </header>
+    <div fxLayout="row" fxLayoutAlign="center" fxLayout.xs="column" fxLayoutGap="30px">
+
+        <div fxLayoutAlign="start center" fxflex="55%">
+            <app-current-city-weather></app-current-city-weather>
+        </div>
+        <mat-divider [vertical]="true"></mat-divider>
+        <div fxLayoutAlign="center">
+            <app-favorites-list></app-favorites-list>
+        </div>
+        
+    </div>
+</main>

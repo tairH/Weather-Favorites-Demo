@@ -5,8 +5,8 @@
     <!-- <mat-autocomplete #auto="matAutocomplete" [displayWith]="displayFn"> 
   <mat-option *ngIf="isLoading" class="is-loading">Loading...</mat-option>
   <ng-container *ngIf="!isLoading">
-    <mat-option *ngFor="let city of filteredCities" [value]="city.Key">
-      <span><b>{{city.Country.LocalizedName}}</b> ({{city.AdministrativeArea.LocalizedName}})</span>
+    <mat-option *ngFor="let city of filteredCities" [value]="city.key">
+      <span><b>{{city.country.localizedName}}</b> ({{city.administrativeArea.localizedName}})</span>
     </mat-option>
   </ng-container>
 </mat-autocomplete>-->
@@ -18,8 +18,8 @@
     <mat-list-option *ngIf="isLoading" class="is-loading">Loading...</mat-list-option>
     <ng-container *ngIf="!isLoading">
       <mat-list-option *ngFor="let city of filteredCities" [value]="city">       
-        <div mat-line>{{city.LocalizedName}}</div>
-        <div mat-line>{{city.Country.LocalizedName}}</div>
+        <div mat-line>{{city.localizedName}}</div>
+        <div mat-line>{{city.country.localizedName}}</div>
       </mat-list-option>
     </ng-container>
   </mat-selection-list>

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "GaVwhHOCkGme4BXNb2uzMbP6k+FvlEOblHr2tHm0c5+tDSwBj4pF1+R/hB+y19hoJk7Xi9FhwfhMAOhu2BSlEw==",
+  "dgSpecHash": "UzhNUgwlrkMkHH9lLuBpNeiGbI1VrCPtwRI+ApmWmZFHc5vnQPJOujjsAP7SZpYLSxL3OUr2pcwRIf+i9H+1gg==",
   "success": true,
-  "projectFilePath": "E:\\Develop\\angular-wheather-favorites-demo\\Server\\WeatherFavorites\\WeatherFavorites.DAL\\WeatherFavorites.Domain.csproj",
+  "projectFilePath": "E:\\Develop\\angular-wheather-favorites-demo\\Weather-Favorites-Demo\\Server\\WeatherFavorites\\WeatherFavorites.Domain\\WeatherFavorites.Domain.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

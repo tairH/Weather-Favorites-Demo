@@ -11,7 +11,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\WeatherFavorites.BL\WeatherFavorites.Application.csproj" />
+    <ProjectReference Include="..\WeatherFavorites.Application\WeatherFavorites.Application.csproj" />
     <ProjectReference Include="..\WeatherFavorites.Infrastracture\WeatherFavorites.Infrastracture.csproj" />
   </ItemGroup>
 

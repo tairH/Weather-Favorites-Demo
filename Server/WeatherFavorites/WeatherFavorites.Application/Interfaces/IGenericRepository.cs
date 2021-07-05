@@ -10,13 +10,13 @@ namespace WeatherFavorites.Application
     public interface IGenericRepository<TEntity> where TEntity : class
     {
         Task<List<TEntity>> GetAll();
-        Task<TEntity> GetById(int id);
+        Task<TEntity> GetById(string id);
         Task Create(TEntity entity);
         Task CreateRange(List<TEntity> entities);
         Task Update(TEntity entity);
         Task Update(IEnumerable<TEntity> entity);
         Task<int> SetField(Expression<Func<TEntity, bool>> predicate, Action<TEntity> action);
-        Task Delete(int id);
+        Task Delete(string id);
         Task<List<TEntity>> Filter(Expression<Func<TEntity, bool>> predicate);
         Task<TEntity> FilterSingle(Expression<Func<TEntity, bool>> predicate);
         Task<int> Count(Expression<Func<TEntity, bool>> predicate);

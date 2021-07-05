@@ -94,7 +94,8 @@ namespace WeatherFavorites.Api.Services
                     {
                         paramsString += param.Key + "=" + param.Value + "&";
                     }
-                    paramsString.Remove(paramsString.Length - 1);//remove the last &
+                    
+                    paramsString = paramsString.Remove(paramsString.Length - 1);//remove the last &
                 }
 
                 HttpResponseMessage res = await cons.GetAsync(apiRelativeUrl + paramsString);
@@ -105,6 +106,7 @@ namespace WeatherFavorites.Api.Services
                 {
 
                     var resData = await res.Content.ReadAsStringAsync();
+                    
                     resJson = JsonConvert.DeserializeObject<T>(resData);
                 }
             }

@@ -1,27 +1,28 @@
-<h4>Current Selected City: <br/>{{ ((selectedCity$ | async)??{LocalizedName:null}).LocalizedName }}</h4>
-<h5 >{{(currentCityTemp$ | async)}}
- <span >C </span></h5>
+<h4>Current Selected City: </h4>
+<h3>
+  {{ ((selectedCity$ | async)??{localizedName:null}).localizedName }}
+</h3>
+<h5 *ngIf="!bootstrap">{{ ((selectedCity$ | async)??{temp:null}).temp }}
+  <!---->
+  <span>C </span>
+</h5>
 <br />
 <button mat-icon-button (click)="toggleSelected()">
-<div *ngIf="selected && (selectedCity$|async)!=null">
-<mat-icon
- 
-  aria-label="Example icon-button with a heart icon">
-  favorite
-  
-</mat-icon>
-<span>Remove From Favorites</span>
-</div>
+  <div *ngIf="selected && (selectedCity$|async)!=null">
+    <mat-icon aria-label="Example icon-button with a heart icon">
+      favorite
 
-<div *ngIf="!selected && (selectedCity$|async)!=null">
-<mat-icon
-  
-  aria-label="Example icon-button with a heart icon">
-  favorite_border
-  
-</mat-icon>
-Add To Favorites
-</div>
-<!--<span *ngIf="!selected && (selectedCity$|async)!=null">Add To Favorites</span>
+    </mat-icon>
+    <span>Remove From Favorites</span>
+  </div>
+
+  <div *ngIf="!selected && (selectedCity$|async)!=null">
+    <mat-icon aria-label="Example icon-button with a heart icon">
+      favorite_border
+
+    </mat-icon>
+    Add To Favorites
+  </div>
+  <!--<span *ngIf="!selected && (selectedCity$|async)!=null">Add To Favorites</span>
 <span *ngIf="selected && (selectedCity$|async)!=null">Remove From Favorites</span>-->
 </button>

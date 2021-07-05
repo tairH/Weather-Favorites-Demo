@@ -1,8 +1,13 @@
-
-<div class="container" fxLayout
-fxLayoutAlign="center"
-fxLayoutGap="10px">
-<div fxLayout
-fxLayoutAlign="right"><app-citie-list ></app-citie-list></div>
-<div><app-current-city-weather></app-current-city-weather>
- </div></div> 
+<div fxLayout="row" fxLayoutAlign="center" fxLayout.xs="column" fxLayoutGap="30px">
+    
+        <div fxLayoutAlign="center">
+            <app-current-city-weather></app-current-city-weather>
+        </div>
+    
+    <mat-divider [vertical]="true"></mat-divider>
+    
+        <div fxLayoutAlign="start center" fxflex="55%">
+            <app-citie-list></app-citie-list>
+        </div>
+    
+</div>

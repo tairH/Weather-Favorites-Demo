@@ -7,3 +7,12 @@ E:\Develop\angular-wheather-favorites-demo\Server\WeatherFavorites\WeatherFavori
 E:\Develop\angular-wheather-favorites-demo\Server\WeatherFavorites\WeatherFavorites.DAL\obj\Debug\netcoreapp3.1\WeatherFavorites.Domain.csproj.CoreCompileInputs.cache
 E:\Develop\angular-wheather-favorites-demo\Server\WeatherFavorites\WeatherFavorites.DAL\obj\Debug\netcoreapp3.1\WeatherFavorites.Domain.dll
 E:\Develop\angular-wheather-favorites-demo\Server\WeatherFavorites\WeatherFavorites.DAL\obj\Debug\netcoreapp3.1\WeatherFavorites.Domain.pdb
+E:\Develop\angular-wheather-favorites-demo\Weather-Favorites-Demo\Server\WeatherFavorites\WeatherFavorites.Domain\bin\Debug\netcoreapp3.1\WeatherFavorites.Domain.deps.json
+E:\Develop\angular-wheather-favorites-demo\Weather-Favorites-Demo\Server\WeatherFavorites\WeatherFavorites.Domain\bin\Debug\netcoreapp3.1\WeatherFavorites.Domain.dll
+E:\Develop\angular-wheather-favorites-demo\Weather-Favorites-Demo\Server\WeatherFavorites\WeatherFavorites.Domain\bin\Debug\netcoreapp3.1\WeatherFavorites.Domain.pdb
+E:\Develop\angular-wheather-favorites-demo\Weather-Favorites-Demo\Server\WeatherFavorites\WeatherFavorites.Domain\obj\Debug\netcoreapp3.1\WeatherFavorites.Domain.csprojAssemblyReference.cache
+E:\Develop\angular-wheather-favorites-demo\Weather-Favorites-Demo\Server\WeatherFavorites\WeatherFavorites.Domain\obj\Debug\netcoreapp3.1\WeatherFavorites.Domain.AssemblyInfoInputs.cache
+E:\Develop\angular-wheather-favorites-demo\Weather-Favorites-Demo\Server\WeatherFavorites\WeatherFavorites.Domain\obj\Debug\netcoreapp3.1\WeatherFavorites.Domain.AssemblyInfo.cs
+E:\Develop\angular-wheather-favorites-demo\Weather-Favorites-Demo\Server\WeatherFavorites\WeatherFavorites.Domain\obj\Debug\netcoreapp3.1\WeatherFavorites.Domain.csproj.CoreCompileInputs.cache
+E:\Develop\angular-wheather-favorites-demo\Weather-Favorites-Demo\Server\WeatherFavorites\WeatherFavorites.Domain\obj\Debug\netcoreapp3.1\WeatherFavorites.Domain.dll
+E:\Develop\angular-wheather-favorites-demo\Weather-Favorites-Demo\Server\WeatherFavorites\WeatherFavorites.Domain\obj\Debug\netcoreapp3.1\WeatherFavorites.Domain.pdb

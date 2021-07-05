@@ -9,11 +9,13 @@ import { MatIconModule } from '@angular/material/icon';
 import { ReactiveFormsModule } from '@angular/forms';
 import { MatAutocompleteModule } from '@angular/material/autocomplete';
 import { FlexLayoutModule } from '@angular/flex-layout';
+import { MatDividerModule } from '@angular/material/divider';
 
 @NgModule({
   imports: [
     CommonModule, 
     MatAutocompleteModule,
+    MatDividerModule,
     MatListModule,
     MatInputModule,
     MatButtonModule,
@@ -25,6 +27,7 @@ import { FlexLayoutModule } from '@angular/flex-layout';
     MatListModule,
     MatInputModule,
     MatButtonModule,
-    MatIconModule,ReactiveFormsModule]
+    MatDividerModule,
+    MatIconModule,ReactiveFormsModule,FlexLayoutModule]
 })
 export class SharedModule { }
